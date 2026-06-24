@@ -1,59 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday Ramu</title>
-
 <link rel="stylesheet" href="style.css">
-
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </head>
-
 <body>
-    <div class="balloon balloon1">🎈</div>
-<div class="balloon balloon2">🎈</div>
-<div class="balloon balloon3">🎈</div>
+
+<div class="bg-glow"></div>
+<div class="lights">💡 💡 💡 💡 💡 💡 💡 💡</div>
+
+<div id="startScreen" class="card">
+  <div class="cake">🎂</div>
+  <h1>🎈 Hey Ramu 🎈</h1>
+  <p id="typing"></p>
+  <button onclick="startSurprise()">🎁 Open Your Surprise</button>
+  <div class="hint">P.S. Don't skip anything 😊</div>
+</div>
+
+<div id="gallery" class="card" style="display:none;">
+  <div class="memory-count">❤️ Memory <span id="memoryNumber">1</span> of 3 ❤️</div>
+  <div class="gallery-layout">
+    <img id="photo" src="photos/photo1.jpg">
+    <div class="message-box">
+      <p id="message"></p>
+      <button onclick="nextSlide()">Next ➜</button>
+    </div>
+  </div>
+</div>
+
+<div id="finalPage" class="card" style="display:none;">
+  <div class="cake big">🎂</div>
+  <h1 class="birthday-title">HAPPY BIRTHDAY RAMU</h1>
+  <p id="finalMessage"></p>
+</div>
 
 <audio id="music" src="music.mp3"></audio>
-
-<div id="startScreen">
-
-    <h1>🎈 Hey Ramu 🎈</h1>
-
-    <p id="typing"></p>
-
-    <button onclick="startSurprise()">
-        Open Your Surprise 🎁
-    </button>
-
-</div>
-
-<div id="gallery" style="display:none;">
-
-    <img id="photo" src="photos/photo1.jpg">
-
-    <p id="message"></p>
-
-    <button onclick="nextSlide()">
-        Next ➜
-    </button>
-
-</div>
-
-<div id="finalPage" style="display:none;">
-
-    <h1 style="font-size:120px;">🎂</h1>
-
-    <h1 class="birthday-title">
-    🎂 HAPPY BIRTHDAY RAMU 🎂
-    </h1>
-
-    <p id="finalMessage"></p>
-
-</div>
-
 <script src="script.js"></script>
-
 </body>
 </html>
