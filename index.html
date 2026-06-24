@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Ramu</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+<audio id="music" src="music.mp3"></audio>
+
+<div id="startScreen">
+
+    <h1>🎈 Hey Ramu 🎈</h1>
+
+    <p id="typing"></p>
+
+    <button onclick="startSurprise()">
+        Open Your Surprise 🎁
+    </button>
+
+</div>
+
+<div id="gallery" style="display:none;">
+
+    <img id="photo" src="photos/photo1.jpg">
+
+    <p id="message"></p>
+
+    <button onclick="nextSlide()">
+        Next ➜
+    </button>
+
+</div>
+
+<div id="finalPage" style="display:none;">
+
+    <h1 style="font-size:120px;">🎂</h1>
+
+    <h1>HAPPY BIRTHDAY RAMU</h1>
+
+    <p id="finalMessage"></p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

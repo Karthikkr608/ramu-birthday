@@ -1,0 +1,34 @@
+body{
+    margin:0;
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    font-family:Segoe UI;
+}
+
+#startScreen,
+#gallery,
+#finalPage{
+    padding-top:60px;
+}
+
+img{
+    width:350px;
+    max-width:90%;
+    border-radius:20px;
+    box-shadow:0 0 25px rgba(255,255,255,.3);
+}
+
+button{
+    padding:15px 25px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    margin-top:20px;
+    font-size:18px;
+}
+
+#message{
+    font-size:22px;
+    padding:20px;
+}
