@@ -1,34 +1,70 @@
 body{
     margin:0;
+    min-height:100vh;
     background:#0f172a;
     color:white;
+    font-family:Segoe UI, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    font-family:Segoe UI;
 }
 
 #startScreen,
 #gallery,
 #finalPage{
-    padding-top:60px;
+    width:90%;
+    max-width:600px;
+    padding:20px;
 }
 
 img{
-    width:350px;
-    max-width:90%;
+    width:100%;
+    max-width:350px;
+    height:auto;
     border-radius:20px;
     box-shadow:0 0 25px rgba(255,255,255,.3);
 }
 
+h1{
+    font-size:2rem;
+}
+
+p{
+    font-size:1.2rem;
+    line-height:1.6;
+}
+
 button{
-    padding:15px 25px;
+    padding:14px 24px;
+    font-size:18px;
     border:none;
-    border-radius:10px;
+    border-radius:12px;
     cursor:pointer;
     margin-top:20px;
-    font-size:18px;
 }
 
 #message{
     font-size:22px;
     padding:20px;
+}
+
+@media (max-width: 768px){
+
+    h1{
+        font-size:1.6rem;
+    }
+
+    p{
+        font-size:1rem;
+    }
+
+    button{
+        width:100%;
+        font-size:16px;
+    }
+
+    #finalPage h1{
+        font-size:2rem !important;
+    }
 }
