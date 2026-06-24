@@ -1,176 +1,45 @@
+
+*{box-sizing:border-box}
 body{
-    margin:0;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(
-        135deg,
-        #1e1b4b,
-        #312e81,
-        #7c3aed,
-        #ec4899
-    );
-    background-size:400% 400%;
-    animation:gradientBG 12s ease infinite;
-    color:white;
-    font-family:'Segoe UI',sans-serif;
-    text-align:center;
+margin:0;min-height:100vh;display:flex;justify-content:center;align-items:center;
+font-family:Segoe UI,sans-serif;color:#fff;text-align:center;overflow:hidden;
+background:linear-gradient(135deg,#160028,#40105f,#8b1f8f,#ff4fa3);
+background-size:400% 400%;animation:bg 12s ease infinite;
 }
-
-@keyframes gradientBG{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+.bg-glow{position:fixed;inset:0;background:radial-gradient(circle,#ffffff22,transparent 60%);pointer-events:none}
+.card{
+width:min(95%,900px);padding:30px;border-radius:30px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(16px);
+border:1px solid rgba(255,255,255,.2);
+box-shadow:0 0 40px rgba(255,105,180,.35);
+z-index:2;
 }
-
-#startScreen,
-#gallery,
-#finalPage{
-
-    width:90%;
-    max-width:740px;
-
-    background:rgba(255,255,255,0.12);
-
-    backdrop-filter:blur(15px);
-
-    border:1px solid rgba(255,255,255,0.2);
-
-    border-radius:25px;
-
-    padding:30px;
-
-    box-shadow:
-    0 8px 32px rgba(0,0,0,0.3);
-}
-
-img{
-    width:100%;
-    max-width:350px;
-
-    border-radius:20px;
-
-    transition:0.5s;
-
-    box-shadow:
-    0 0 25px rgba(255,255,255,0.3);
-}
-
-img:hover{
-    transform:scale(1.05);
-}
-
-h1{
-    font-size:2rem;
-}
-
-p{
-    font-size:1.2rem;
-    line-height:1.6;
-}
-
+.lights{position:fixed;top:10px;width:100%;font-size:22px;animation:blink 1s infinite alternate}
+@keyframes blink{from{opacity:.4}to{opacity:1}}
+h1{font-size:4rem;font-family:cursive;margin:10px 0}
+#typing{font-size:2rem}
 button{
-
-    background:#ff4d8d;
-
-    color:white;
-
-    border:none;
-
-    border-radius:50px;
-
-    padding:15px 30px;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-    transition:0.3s;
+background:linear-gradient(90deg,#ff5ea8,#ff7f50);
+border:none;color:white;padding:16px 30px;border-radius:40px;
+font-size:1.1rem;cursor:pointer
 }
-
-button:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:
-    0 10px 20px rgba(255,77,141,.4);
+.hint{margin-top:15px;opacity:.8}
+.gallery-layout{display:flex;gap:30px;align-items:center;justify-content:center}
+img{
+width:380px;max-width:100%;border-radius:25px;
+box-shadow:0 0 25px #ff9ad5,0 0 60px #ffffff55;
 }
-
-#message{
-    font-size:22px;
-    padding:20px;
-}
-
-.balloon{
-    position:fixed;
-    font-size:40px;
-    animation:float 8s linear infinite;
-}
-
-.balloon1{
-    left:10%;
-}
-
-.balloon2{
-    left:50%;
-    animation-delay:2s;
-}
-
-.balloon3{
-    left:80%;
-    animation-delay:4s;
-}
-
-#typing{
-    font-size:24px;
-    color:#fff;
-    text-shadow:
-    0 0 10px #fff,
-    0 0 20px #ff69b4;
-}
-
-.birthday-title{
-
-    font-size:3rem;
-
-    animation:pulse 1.5s infinite;
-}
-
-@keyframes pulse{
-
-    0%{transform:scale(1);}
-    50%{transform:scale(1.08);}
-    100%{transform:scale(1);}
-}
-
-@keyframes float{
-
-    from{
-        bottom:-100px;
-    }
-
-    to{
-        bottom:110%;
-    }
-}
-
-@media (max-width: 768px){
-
-    h1{
-        font-size:1.6rem;
-    }
-
-    p{
-        font-size:1rem;
-    }
-
-    button{
-        width:100%;
-        font-size:16px;
-    }
-
-    #finalPage h1{
-        font-size:2rem !important;
-    }
+.message-box{max-width:320px;font-size:2rem}
+.memory-count{margin-bottom:20px;color:#ffd6ea;font-weight:bold}
+.birthday-title{font-size:3rem}
+#finalMessage{font-size:1.3rem;line-height:1.8}
+.cake.big{font-size:100px}
+@media(max-width:768px){
+h1{font-size:2.5rem}
+#typing{font-size:1.3rem}
+.gallery-layout{flex-direction:column}
+.message-box{font-size:1.2rem}
+img{width:100%}
 }
