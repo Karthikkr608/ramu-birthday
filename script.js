@@ -39,10 +39,35 @@ function showFinalPage(){
  document.getElementById('gallery').style.display='none';
  document.getElementById('finalPage').style.display='block';
  confetti({particleCount:300,spread:180});
- document.getElementById('finalMessage').innerHTML=`
- You may be my sister's son, but to me you have always been more like a best friend.<br><br>
- Thank you for all the memories and laughs.<br><br>
- May your life be filled with happiness, success and good health.<br><br>
- <span style="font-size:32px;color:#ffb3d9;font-family:cursive">
- With lots of love and best wishes,<br>Karthi ❤️</span>`;
+ document.getElementById("finalMessage").innerHTML = `
+
+You are not just my sister's son,
+
+you are one of my best friends ❤️
+
+<br><br>
+
+Thank you for all the memories,
+
+laughs and adventures.
+
+<br><br>
+
+May this year bring you happiness,
+
+success and good health.
+
+<br><br>
+
+<div style="
+font-size:28px;
+color:#ffb3d9;
+font-family:cursive;">
+
+With lots of love,<br>
+Karthi ❤️
+
+</div>
+
+`;
 }
